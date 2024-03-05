@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Théo Silva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+
+<body>
+    <img class="logo" src="/assets/_img/logo.png" alt="logo-do-conversor">
+    <main>
+        <label>
+            <p>Converter <strong>de</strong></p>
+            <select class="select-to-convert">
+                <option value="real">R$ Real brasileiro</option>
+                <option value="dolar">US$ Dólar americano</option>
+                <option value="euro">€ Euro</option>
+            </select>
+        </label>
+        <label>
+            <p><strong>Para</strong></p>
+            <select class="select-converted">
+                <option value="real">R$ Real brasileiro</option>
+                <option value="dolar">US$ Dólar americano</option>
+                <option value="euro">€ Euro</option>
+            </select>
+        </label>
+        <label>
+            <p>Valor a ser convertido</b></p>
+            <input class="input-value" placeholder="1.000,00">
+        </label>
+        <button class="convert-button">Converter</button>
+        <section>
+            <div id="real">
+                <img class="bandeira" src="/assets/_img/real.png" alt="moeda a converter">
+                <p>Real</p>
+                <p class="valor">R$ 0,00</p>
+            </div>
+            <img id="vector" class="bandeira" src="/assets/_img/vector.png">
+            <div>
+                <img class="bandeira" src="/assets/_img/euro.png" alt="moeda convertida">
+                <p>Euro</p>
+                <p class="valor-convertido">€ 0,00</p>
+            </div>
+        </section>
+
+    </main>
+
+
+</body>
+<script src="/script.js"></script>
+</html>

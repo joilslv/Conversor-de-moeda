@@ -1,0 +1,140 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+body {
+    background-color: rgb(112, 164, 220);
+}
+
+.logo {
+    width: 300px;
+    display: block;
+    margin: 0px auto;
+    
+
+
+}
+
+.bandeira {
+    display: block;
+    margin: 5px auto;
+
+}
+
+main {
+    background-color: azure;
+    width: 375px;
+    height: 675px;
+    top: 587px;
+    left: 2260px;
+    border-radius: 20px;
+    display: block;
+    margin: 0px auto;
+    box-shadow: 0px 7px 15px black;
+}
+
+label {
+    width: 327px;
+    height: 72px;
+    top: 44px;
+    left: 24px;
+    border-radius: 4px;
+    border: 1px;
+    font-size: 20px;
+
+}
+
+select {
+
+    width: 90%;
+    height: 48px;
+    top: 163px;
+    left: 24px;
+    border-radius: 4px;
+    border: 1px solid #bbbbbb;
+    margin: 0px 19px auto;
+    margin-bottom: 10px;
+    padding-left: 18px;
+    appearance: none;
+    font-weight: 700px;
+    font-size: 16px;
+    color: #555555;
+    cursor: pointer
+}
+
+input {
+    background-color: #ffffff;
+    width: 90%;
+    height: 48px;
+    top: 163px;
+    left: 24px;
+    border-radius: 4px;
+    border: 1px solid #bbbbbb;
+    margin: 0px 19px auto;
+    margin-bottom: 20px;
+    padding-left: 18px;
+    appearance: none;
+    font-weight: 700px;
+    font-size: 16px;
+    color: #555555;
+    cursor: pointer
+}
+
+button {
+    background-color: rgb(111, 20, 172);
+    border-radius: 5px;
+    width: 90%;
+    height: 48px;
+    border: none;
+    color: #ffffff;
+    font-weight: 700px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0px 19px auto;
+    margin-bottom: 10px;
+    padding-left: 18px;
+
+
+
+}
+
+p {
+    text-align: center;
+}
+
+.valor, .valor-convertido{
+
+    font-weight: 700;
+    font-size: 20px;
+
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:active {
+    opacity: 0.6;
+}
+
+section {
+    width: 327px;
+    height: 325px;
+    border-radius: 20px;
+    border: 1px;
+    background-color: rgb(204, 200, 200);
+    margin: 10px auto;
+}
+#real{
+    padding-top: 5px ;
+}
+#vector{
+    width: 50px;
+}
