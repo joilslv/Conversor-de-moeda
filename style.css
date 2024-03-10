@@ -22,8 +22,7 @@ body {
 
 }
 
-.bandeira {
-    display: block;
+.bandeira, .bandeira1, .bandeira2 {    display: block;
     margin: 5px auto;
 
 }
@@ -69,7 +68,7 @@ select {
     cursor: pointer
 }
 
-input {
+input  {
     background-color: #ffffff;
     width: 90%;
     height: 48px;
@@ -86,6 +85,7 @@ input {
     color: #555555;
     cursor: pointer
 }
+
 
 button {
     background-color: rgb(111, 20, 172);
@@ -109,7 +109,7 @@ p {
     text-align: center;
 }
 
-.valor, .valor-convertido{
+.valor, .valor2, #currency2, #currency{
 
     font-weight: 700;
     font-size: 20px;

@@ -2,57 +2,62 @@
 
 
 const convertButton = document.querySelector(".convert-button")
-
+const currencySelect = document.querySelector(".select")
+const currencySelectTo = document.querySelector(".select-to")
 
 
 function convertValues() {
     const inputValue = document.querySelector(".input-value").value
     const showsValueToConvert = document.querySelector(".valor")
-    const showsValueConverted = document.querySelector(".valor-convertido")
-    const currencySelect = document.querySelector(".select").value
+    const showsValueConverted2 = document.querySelector(".valor2")
     const currencySelectTo = document.querySelector(".select-to").value
-    const paragrafoEuro = document.querySelector(".europ")
+    const RealToEuroToday = 5.37
+    const RealToDolarToday = 4.9
 
-    const euroToday = 5.37
-    const dolarToday = 4.9
-    const convertedValue = inputValue/euroToday
+    if (currencySelectTo == "dolar") {
+        showsValueConverted2.innerHTML = new Intl.NumberFormat("en-UK", {
+            style: "currency",
+            currency: "USD",
+    }).format(inputValue / RealToDolarToday);
+      } else {
+        showsValueConverted2.innerHTML = new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "EUR",
+    }).format(inputValue / RealToEuroToday);
+      }
+      
 
     showsValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
         style: "currency",
-        currency: "BRL" }).format(inputValue)
-    /*showsValueConverted.innerHTML = new Intl.NumberFormat("ESP", {
-        style: "currency",
-        currency: "EUR" }).format(convertedValue)
-    console.log(currencySelectTo)*/
+        currency: "BRL",
+}).format(inputValue)
+
+    console.log(currencySelectTo)
+}
 
 
 
-    
-
-    if (currencySelectTo == "euro") {
-        showsValueConverted.innerHTML = new Intl.NumberFormat("ESP", {
-            style: "currency",
-            currency: "EUR"
-        }).format(inputValue / euroToday)
-    }
+function changeCurrency() {
+    const currencySelectTo = document.querySelector(".select-to").value
+    const currencyNameUp = document.querySelector(".currency1")
+    const currencyimage = document.querySelector(".bandeira2")
+    const currencyNameDown = document.querySelector(".currency2")
 
     if (currencySelectTo == "dolar") {
-        showsValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "USD"
-        }).format(inputValue / dolarToday)
+        currencyNameDown.innerHTML = "Dólar Americano"
+        currencyimage.src = "/assets/_img/dolar.png"
     }
-
+    if (currencySelectTo == "euro") {
+        currencyNameDown.innerHTML = "Euro"
+        currencyimage.src = "/assets/_img/euro.png"
+    }
     if (currencySelectTo == "real") {
-        showsValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
-            style: "currency",
-            currency: "BRL"
-        }).format(inputValue / 1)
-        
+        currencyNameDown.innerHTML = "Real"
+        currencyimage.src = "/assets/_img/real.png"
     }
-
-   
+    
 
 }
 
+currencySelectTo.addEventListener("change", changeCurrency)
 convertButton.addEventListener("click", convertValues)
